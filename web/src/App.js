@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import isApp from 'utils/isApp';
 
-const welcomeType = isApp ? 'Aplicativo' : 'Web';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
 
-function App() {
+import Root from './Root'
+import Home from './pages/Home'
+import About from './pages/About'
+
+const AppRouter = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World - {welcomeType}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router component={Root}>
+			<Route>
+				<Route component={Root}/>
+				<Route exact path="/" component={Home} />
+				<Route path="/about" component={About}/>
+			</Route>
+    </Router>
   );
 }
 
-export default App;
+export default AppRouter 

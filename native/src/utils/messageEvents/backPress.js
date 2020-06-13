@@ -1,5 +1,5 @@
-const backPress = () => {
-  //handle backPress here
+const backPress = ({ messageBack }) => {
+	//ref.setState({ customBack: messageBack })
 }
 
 export default backPress

@@ -2,12 +2,22 @@ import keys from 'ramda/src/keys'
 import pipe from 'ramda/src/pipe'
 import defaultTo from 'ramda/src/defaultTo'
 
-//export const rootUrl = 'http://localhost:3000/'
-export const rootUrl = 'https://www.google.com/?teste=true'
+export const hostname = 'localhost'
+export const rootUrl = 'http://localhost:3000/'
+
+const about = `${rootUrl}about`
 
 export const urlToStatusBarColor = {
+  [rootUrl]: {
+    backgroundColor: '#ff0000',
+    barStyle: 'dark-content',
+  },
+  [about]: {
+    backgroundColor: '#CCCCCC',
+    barStyle: 'dark-content',
+  },
   default: {
-    backgroundColor: '#ff000',
+    backgroundColor: '#ffffff',
     barStyle: 'dark-content',
   },
 }

@@ -4,7 +4,7 @@ import { WebView } from 'react-native-webview'
 import { View, SafeAreaView, StatusBar } from 'react-native'
 import styles from './styles.js'
 
-import enhancer from './logic'
+import enhancer from './hooks'
 
 const { styleNew, safearea } = styles
 

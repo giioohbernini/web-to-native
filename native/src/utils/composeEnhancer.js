@@ -1,9 +1,9 @@
 import React from 'react'
 
 const composeEnhancer = (...layers) => BaseComponent => {
-  return () => {
-    const props = layers.reduce((prevProps, layer) => {
-      const layerProps = layer.call(null, prevProps)
+  return props => {
+    const hooksProps = layers.reduce((prevProps, layer) => {
+      const layerProps = layer.call(null, { ...props, ...prevProps })
 
       return {
         ...prevProps,
@@ -11,7 +11,7 @@ const composeEnhancer = (...layers) => BaseComponent => {
       }
     }, {})
 
-    return <BaseComponent {...props} />
+    return <BaseComponent {...props} {...hooksProps} />
   }
 }
 

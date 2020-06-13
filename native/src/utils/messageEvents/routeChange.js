@@ -1,12 +1,6 @@
 import { dashUri } from '~/constants/webview'
 
-const routeChange = ({
-  location,
-  setCurrentUrl,
-  setCanGoBack,
-  setUrlParams,
-  setStatusBarColor,
-}) => {
+const routeChange = ({ location, setCurrentUrl, setCanGoBack }) => {
   const href = location && location.href
 
   if (href) {
