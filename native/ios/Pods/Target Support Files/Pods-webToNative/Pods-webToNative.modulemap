@@ -1,0 +1,6 @@
+module Pods_webToNative {
+  umbrella header "Pods-webToNative-umbrella.h"
+
+  export *
+  module * { export * }
+}
