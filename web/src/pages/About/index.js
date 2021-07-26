@@ -8,7 +8,7 @@ const welcomeType = isApp
 const About = () => {
 	return (
     <div>
-			<h2>About - {welcomeType}</h2>
+			<h2>About - {welcomeType}!!</h2>
     </div>
 	)
 }
