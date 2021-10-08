@@ -8,7 +8,7 @@ const welcomeType = isApp
 const Home = () => {
 	return (
     <div>
-			<h2>Home - {welcomeType}</h2>
+			<h2>Biscoito Home - {welcomeType}</h2>
     </div>
 	)
 }
